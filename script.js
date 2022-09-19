@@ -23,5 +23,12 @@ function calculate(){
 
     let bmiResult= BMI(weight,height);
     let desc= Status(bmiResult);
-    document.getElementById("result").innerText=desc + bmiResult;
+    if(desc=="لديك نقص في الوزن"){
+    document.getElementById('result').style.color='Orange'
+    } else if(desc=="وزنك صحي"){
+    document.getElementById('result').style.color='Green'
+} else if(desc=="لديك زيادة في الوزن"){
+    document.getElementById('result').style.color='Red'
+}
+document.getElementById("result").innerText=desc + bmiResult;
 }
